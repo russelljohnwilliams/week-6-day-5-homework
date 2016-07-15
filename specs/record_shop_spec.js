@@ -53,6 +53,15 @@ describe( "RecordShop", function() {
     assert.equal(3, surfaceNoise.stock.length)
   })
 
+  it ("added the value of removed item to till", function(){
+    surfaceNoise.addRecord(loveless);
+    surfaceNoise.addRecord(theWayItIs);
+    surfaceNoise.addRecord(crooked);
+    surfaceNoise.addRecord(vivaHate);
+    surfaceNoise.removeRecord(loveless);
+    assert.equal(9.99, surfaceNoise.till)
+  })
+
 
   // it ("lists title, artist, price of inventory items", function(){
   //   surfaceNoise.addRecord(loveless)
