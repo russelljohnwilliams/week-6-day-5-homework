@@ -20,5 +20,10 @@ describe( "Records", function() {
     assert.equal("Tanglewood Numbers", tanglewoodNumbers.title)
   })
 
+  it ("record has an artist", function(){
+    assert.equal("Morrissey", vivaHate.artist)
+  })
+
+
 
 })
