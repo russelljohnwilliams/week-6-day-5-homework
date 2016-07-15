@@ -23,13 +23,16 @@ RecordShop.prototype = {
     this.till += price
   },
 
-  totalCash: function(){
-    this.till = 0
-    var total = _.sumBy(this.stock, 'price');
-    this.till += total
+  totalCash: function(attribute){
+    var total = _.sumBy(attribute, 'price');
+    return total
   },
 
-
+callback: function(stuff, stuff?){
+  functionOfSomeDescription(either, or)
+  either = this.till
+  or = this.stock
+}
 
 
 
