@@ -17,11 +17,19 @@ RecordShop.prototype = {
   },
 
   soldRecord: function(title){
-    var array = _.findIndex(this.stock, title);
-    var pulled = _.pullAt(this.stock, [array]);
+    var soldItem = _.findIndex(this.stock, title);
+    var pulled = _.pullAt(this.stock, [soldItem]);
     var price = _.map(pulled, 'price');
     this.till += price
-  }
+  },
+
+  totalCash: function(){
+    this.till = 0
+    var total = _.sumBy(this.stock, 'price');
+    this.till += total
+  },
+
+
 
 
 
@@ -30,20 +38,3 @@ RecordShop.prototype = {
 
 module.exports = RecordShop;
 
-
-
-
-
-
-// var inventory = _.remove(array, ['title'];
-// return inventory
-
-
-
-
-// listInventory2: function(){
-//   var inventory = _.sortBy(this.stock, ['artist']);
-//   var inventory2 = _.map(inventory,'title', 'artist', 'price');
-//   console.log(inventory2)
-//   return inventory2
-// }

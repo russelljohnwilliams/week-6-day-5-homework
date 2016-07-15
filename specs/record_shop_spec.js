@@ -62,14 +62,14 @@ describe( "RecordShop", function() {
     assert.equal(9.99, surfaceNoise.till)
   })
 
+  it ("found value of stock", function(){
+    surfaceNoise.addRecord(loveless);
+    surfaceNoise.addRecord(theWayItIs);
+    surfaceNoise.addRecord(crooked);
+    surfaceNoise.addRecord(vivaHate);
+    surfaceNoise.totalCash();
+    assert.equal(28.96, surfaceNoise.till)
+  })
 
-  // it ("lists title, artist, price of inventory items", function(){
-  //   surfaceNoise.addRecord(loveless)
-  //   assert.equal([loveless], surfaceNoise.listInventory2())
-  // })
-
-
+ 
 })
-
-
-  // { 'Loveless': 'My Bloody Valentine': 9.99 }
