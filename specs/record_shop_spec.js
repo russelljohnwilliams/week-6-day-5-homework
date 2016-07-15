@@ -37,8 +37,11 @@ describe( "RecordShop", function() {
   })
 
   it ("lists all the stock in inventory", function(){
+    surfaceNoise.addRecord(loveless)
+    surfaceNoise.addRecord(theWayItIs)
+    surfaceNoise.addRecord(crooked)
     surfaceNoise.addRecord(vivaHate)
-    assert.equal([vivaHate], surfaceNoise.listInventory())
+    assert.deepEqual([theWayItIs, vivaHate, loveless, crooked], surfaceNoise.listInventory())
   })
 
 })

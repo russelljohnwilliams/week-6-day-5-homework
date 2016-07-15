@@ -13,9 +13,7 @@ RecordShop.prototype = {
 
   listInventory: function(){
     var inventory = _.sortBy(this.stock, ['artist']);
-    return inventory
-    console.log(inventory)
-  }
+    return inventory  }
 }
 
 module.exports = RecordShop;
