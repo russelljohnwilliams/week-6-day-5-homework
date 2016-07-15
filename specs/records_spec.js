@@ -24,6 +24,11 @@ describe( "Records", function() {
     assert.equal("Morrissey", vivaHate.artist)
   })
 
+  it ("record has a price", function(){
+    assert.equal(4.99, theWayItIs.price)
+  })
+
+
 
 
 })
