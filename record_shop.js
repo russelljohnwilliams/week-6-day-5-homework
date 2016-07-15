@@ -16,7 +16,7 @@ RecordShop.prototype = {
     return inventory  
   },
 
-  removeRecord: function(title){
+  soldRecord: function(title){
     var array = _.findIndex(this.stock, title);
     var pulled = _.pullAt(this.stock, [array]);
     var price = _.map(pulled, 'price');

@@ -49,7 +49,7 @@ describe( "RecordShop", function() {
     surfaceNoise.addRecord(theWayItIs);
     surfaceNoise.addRecord(crooked);
     surfaceNoise.addRecord(vivaHate);
-    surfaceNoise.removeRecord(loveless);
+    surfaceNoise.soldRecord(loveless);
     assert.equal(3, surfaceNoise.stock.length)
   })
 
@@ -58,7 +58,7 @@ describe( "RecordShop", function() {
     surfaceNoise.addRecord(theWayItIs);
     surfaceNoise.addRecord(crooked);
     surfaceNoise.addRecord(vivaHate);
-    surfaceNoise.removeRecord(loveless);
+    surfaceNoise.soldRecord(loveless);
     assert.equal(9.99, surfaceNoise.till)
   })
 
