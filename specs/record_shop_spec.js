@@ -8,6 +8,12 @@ describe( "RecordShop", function() {
 
   beforeEach( function() {
 
+    surfaceNoise = new RecordShop("Surface Noise", "Newcastle");
+
+  })
+
+  it ("record shop has a title", function(){
+    assert.equal("Surface Noise", surfaceNoise.name)
   })
 
 })

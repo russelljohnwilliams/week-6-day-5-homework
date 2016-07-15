@@ -1,7 +1,7 @@
 var RecordShop = function(name, city) {
   this.name = name;
   this.city = city;
-  stock = [];
+  this.stock = [];
 }
 
 module.exports = RecordShop;
