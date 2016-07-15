@@ -32,8 +32,13 @@ describe( "RecordShop", function() {
 
   it ("book record in to stock", function() {
     surfaceNoise.addRecord(loveless);
-    assert.equal(1, surfaceNoise.stock.length)
+    surfaceNoise.addRecord(vivaHate);
+    assert.equal(2, surfaceNoise.stock.length)
   })
 
+  it ("lists all the stock in inventory", function(){
+    surfaceNoise.addRecord(vivaHate)
+    assert.equal([vivaHate], surfaceNoise.listInventory())
+  })
 
 })

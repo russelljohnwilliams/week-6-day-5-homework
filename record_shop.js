@@ -6,8 +6,15 @@ var RecordShop = function(name, location, till) {
 }
 
 RecordShop.prototype = {
+  
   addRecord: function(record){
     this.stock.push(record);
+  },
+
+  listInventory: function(){
+    var inventory = _.sortBy(this.stock, ['artist']);
+    return inventory
+    console.log(inventory)
   }
 }
 
