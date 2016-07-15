@@ -16,4 +16,8 @@ describe( "RecordShop", function() {
     assert.equal("Surface Noise", surfaceNoise.name)
   })
 
+  it ("record shop has a location", function(){
+    assert.equal("Newcastle", surfaceNoise.location)
+  })
+
 })

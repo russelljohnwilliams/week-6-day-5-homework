@@ -1,6 +1,6 @@
-var RecordShop = function(name, city) {
+var RecordShop = function(name, location) {
   this.name = name;
-  this.city = city;
+  this.location = location;
   this.stock = [];
 }
 
