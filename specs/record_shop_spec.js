@@ -37,11 +37,30 @@ describe( "RecordShop", function() {
   })
 
   it ("lists all the stock in inventory", function(){
-    surfaceNoise.addRecord(loveless)
-    surfaceNoise.addRecord(theWayItIs)
-    surfaceNoise.addRecord(crooked)
-    surfaceNoise.addRecord(vivaHate)
+    surfaceNoise.addRecord(loveless);
+    surfaceNoise.addRecord(theWayItIs);
+    surfaceNoise.addRecord(crooked);
+    surfaceNoise.addRecord(vivaHate);  
     assert.deepEqual([theWayItIs, vivaHate, loveless, crooked], surfaceNoise.listInventory())
   })
 
+  it ("Removed a copy of loveless", function(){
+    surfaceNoise.addRecord(loveless);
+    surfaceNoise.addRecord(theWayItIs);
+    surfaceNoise.addRecord(crooked);
+    surfaceNoise.addRecord(vivaHate);
+    surfaceNoise.removeRecord(loveless);
+    assert.equal(3, surfaceNoise.stock.length)
+  })
+
+
+  // it ("lists title, artist, price of inventory items", function(){
+  //   surfaceNoise.addRecord(loveless)
+  //   assert.equal([loveless], surfaceNoise.listInventory2())
+  // })
+
+
 })
+
+
+  // { 'Loveless': 'My Bloody Valentine': 9.99 }
