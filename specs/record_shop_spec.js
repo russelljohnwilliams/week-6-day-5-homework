@@ -20,4 +20,8 @@ describe( "RecordShop", function() {
     assert.equal("Newcastle", surfaceNoise.location)
   })
 
+  it ("record shop has NO stock", function(){
+    assert.equal(0, surfaceNoise.stock.length)
+  })
+
 })
