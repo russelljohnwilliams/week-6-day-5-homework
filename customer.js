@@ -14,22 +14,26 @@ Customer.prototype = {
   },
 
   buyRecord: function(record, shop){
+    // add record to shopping bag   
     this.shoppingBag.push(record);
+    // remove that cost from wallet
     this.wallet -= (_.toNumber(record.price));
+    // add price to shop till
     shop.till += (_.toNumber(record.price));
+    //find item by index
     var soldItem = _.findIndex(shop.stock, record);
+    // take record from shop by index
     _.pullAt(shop.stock, [soldItem]);
   },
 
   sellRecord: function(record, shop){
     var soldItem = _.findIndex(this.shoppingBag, record);
     var pulled = _.pullAt(this.shoppingBag, [soldItem]);
+    shop.stock.push(record);
     var price = _.map(pulled, 'price');
     this.wallet += (_.toNumber(price));
     shop.till -= (_.toNumber(price));
   }
-
-
 
 }
 
@@ -38,11 +42,6 @@ module.exports = Customer;
 
 
 
-// pass in record as argument
-// take record from shop
-// find out how much it costs
-// remove that cost from wallet
-// add it to shopping bag   
 
 
 // console.log(callback);

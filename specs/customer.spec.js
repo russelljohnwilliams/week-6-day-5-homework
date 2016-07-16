@@ -35,6 +35,8 @@ describe( "Customer", function(){
     assert.equal(1, bob.shoppingBag.length)
   })
 
+  // ========= bob buyRecord =========
+
   it ("customer puts a record in shopping bag", function(){
     surfaceNoise.addRecord(loveless);
     surfaceNoise.addRecord(vivaHate);
@@ -63,20 +65,33 @@ describe( "Customer", function(){
     assert.equal(9.99, surfaceNoise.till)
   })
 
-  it ("customer sells a record", function(){
-      surfaceNoise.addRecord(loveless);
+// ========= bob sellRecord =========
+
+  it ("customer hands over a record for sale", function(){
       bob.addRecord(loveless);
       bob.addRecord(vivaHate)
       bob.sellRecord(loveless, surfaceNoise);
       assert.equal(1, bob.shoppingBag.length)
   })
 
-  it  ("customer sells a record", function(){
-      surfaceNoise.addRecord(loveless);
+  it  ("customer gets paid for record", function(){
       bob.addRecord(loveless);
-      bob.addRecord(vivaHate)
       bob.sellRecord(loveless, surfaceNoise);
       assert.equal(159.99, bob.wallet)
+  })
+
+  it ("record shop pays customer for record", function(){
+      bob.addRecord(loveless);
+      bob.sellRecord(loveless, surfaceNoise);
+      assert.equal(-9.99, surfaceNoise.till)
+  })
+
+  it ("record shop adds record to stock", function(){
+      surfaceNoise.addRecord(vivaHate);
+      bob.addRecord(loveless);
+      bob.sellRecord(loveless, surfaceNoise);
+      assert.equal(2, surfaceNoise.stock.length)
+
   })
 
 
