@@ -70,17 +70,17 @@ describe( "RecordShop", function() {
     assert.equal(28.96, surfaceNoise.totalCash(surfaceNoise.stock))
   })
 
-  // it ("found value of till", function(){
-  //   surfaceNoise.addRecord(loveless);
-  //   surfaceNoise.addRecord(tanglewoodNumbers);
-  //   surfaceNoise.addRecord(vivaHate);
+  it ("found value of till", function(){
+    surfaceNoise.addRecord(loveless);
+    surfaceNoise.addRecord(tanglewoodNumbers);
+    surfaceNoise.addRecord(vivaHate);
 
-  //   surfaceNoise.soldRecord(loveless);
-  //   surfaceNoise.soldRecord(vivaHate);
-  //   surfaceNoise.soldRecord(tanglewoodNumbers);
+    surfaceNoise.soldRecord(loveless);
+    surfaceNoise.soldRecord(vivaHate);
+    surfaceNoise.soldRecord(tanglewoodNumbers);
 
-  //   assert.equal(27.97, surfaceNoise.totalCash(surfaceNoise.till))
-  // })
+    assert.equal(27.97, surfaceNoise.totalCash(surfaceNoise.till))
+  })
 
  
 })
