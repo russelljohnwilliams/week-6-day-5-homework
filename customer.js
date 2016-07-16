@@ -1,3 +1,5 @@
+var Record = require('./records');
+var RecordShop = require('./record_shop')
 
 var Customer  = function(name, wallet){
   this.name = name;
@@ -13,12 +15,9 @@ Customer.prototype = {
 
   buyRecord: function(record, callback){
     callback(record);
-
-    this.wallet -= (_.toNumber(price));
-    console.log(price);
-    console.log(pulled);
-    this.shoppingBag.push(pulled);
-  }
+    this.wallet -= (_.toNumber(record.price));
+    this.shoppingBag.push(record);
+  }//.bind( this )
 }
 
 module.exports = Customer;
@@ -34,6 +33,5 @@ module.exports = Customer;
 
 // console.log(callback);
 // console.log(price);
-// console.log(record);
-// console.log(pulled);
+
 

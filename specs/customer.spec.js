@@ -13,6 +13,8 @@ describe( "Customer", function(){
     surfaceNoise = new RecordShop("Surface Noise", "Newcastle");
 
     loveless = new Record("Loveless", "My Bloody Valentine", 9.99);
+    vivaHate = new Record("Viva Hate", "Morrissey", 5.99);
+
 
   })
 
@@ -31,26 +33,23 @@ describe( "Customer", function(){
   it("customer has a record in shopping bag", function(){
     bob.addRecord(loveless);
     assert.equal(1, bob.shoppingBag.length)
-
-    it ("customer puts a record in shopping bag", function(){
-      surfaceNoise.addRecord(loveless);
-      bob.buyRecord(loveless, surfaceNoise.soldRecord());
-      assert.equal(1, bob.shoppingBag.length)
-    })
-
-    it
-
   })
 
-  // it ("customer sells a record")
+  it ("customer puts a record in shopping bag", function(){
+    surfaceNoise.addRecord(loveless);
+    surfaceNoise.addRecord(vivaHate);
+    console.log(surfaceNoise.stock);
+    bob.buyRecord(loveless, surfaceNoise.soldRecord);
+    console.log(surfaceNoise.stock);
+    assert.equal(1, bob.shoppingBag.length)
+  })
 
- 
+  // it ("customer removes money from wallet", function(){
+  //   surfaceNoise.addRecord(loveless);
+  //   surfaceNoise.addRecord(vivaHate);
+  //   bob.buyRecord(loveless, surfaceNoise.soldRecord);
+  //   assert.equal(140.01, bob.wallet)
+  // })
 
-
-
-
-
-
-})
-
+ })
 
