@@ -9,6 +9,15 @@ Customer.prototype = {
 
   addRecord: function(record){
     this.shoppingBag.push(record);
+  },
+
+  buyRecord: function(record, callback){
+    callback(record);
+
+    this.wallet -= (_.toNumber(price));
+    console.log(price);
+    console.log(pulled);
+    this.shoppingBag.push(pulled);
   }
 }
 
@@ -28,10 +37,3 @@ module.exports = Customer;
 // console.log(record);
 // console.log(pulled);
 
-
-
-//  buyRecord: function(record, callback){
-//   callback(record);
-//   this.wallet -= (_.toNumber(price));
-//   this.shoppingBag.push(pulled);
-// }

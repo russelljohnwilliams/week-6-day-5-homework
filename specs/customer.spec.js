@@ -34,10 +34,12 @@ describe( "Customer", function(){
 
     it ("customer puts a record in shopping bag", function(){
       surfaceNoise.addRecord(loveless);
-      bob.buyRecord(loveless, surfaceNoise.soldRecord;
+      bob.buyRecord(loveless, surfaceNoise.soldRecord());
       assert.equal(1, bob.shoppingBag.length)
     })
-      
+
+    it
+
   })
 
   // it ("customer sells a record")
