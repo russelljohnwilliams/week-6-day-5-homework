@@ -28,6 +28,22 @@ describe( "Customer", function(){
     assert.equal(0, bob.shoppingBag.length)
   })
 
+  it("customer has a record in shopping bag", function(){
+    bob.addRecord(loveless);
+    assert.equal(1, bob.shoppingBag.length)
+
+    it ("customer puts a record in shopping bag", function(){
+      surfaceNoise.addRecord(loveless);
+      bob.buyRecord(loveless, surfaceNoise.soldRecord;
+      assert.equal(1, bob.shoppingBag.length)
+    })
+      
+  })
+
+  // it ("customer sells a record")
+
+ 
+
 
 
 

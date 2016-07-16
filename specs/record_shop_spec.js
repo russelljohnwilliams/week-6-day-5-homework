@@ -66,7 +66,7 @@ describe( "RecordShop", function() {
     surfaceNoise.addRecord(loveless);
     surfaceNoise.addRecord(tanglewoodNumbers);
     surfaceNoise.addRecord(theWayItIs);
-        
+    
     surfaceNoise.soldRecord(loveless);
     surfaceNoise.soldRecord(tanglewoodNumbers);
     surfaceNoise.soldRecord(theWayItIs);
