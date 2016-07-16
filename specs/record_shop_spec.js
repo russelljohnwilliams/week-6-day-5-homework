@@ -62,6 +62,17 @@ describe( "RecordShop", function() {
     assert.equal(21.98, surfaceNoise.till)
   })
 
+  it ("added more value of removed item to till", function(){
+    surfaceNoise.addRecord(loveless);
+    surfaceNoise.addRecord(tanglewoodNumbers);
+    surfaceNoise.addRecord(theWayItIs);
+        
+    surfaceNoise.soldRecord(loveless);
+    surfaceNoise.soldRecord(tanglewoodNumbers);
+    surfaceNoise.soldRecord(theWayItIs);
+    assert.equal(26.97, surfaceNoise.till)
+  })
+
   it ("found value of stock", function(){
     surfaceNoise.addRecord(loveless);
     surfaceNoise.addRecord(theWayItIs);
