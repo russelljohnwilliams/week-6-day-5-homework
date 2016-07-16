@@ -55,8 +55,11 @@ describe( "RecordShop", function() {
 
   it ("added the value of removed item to till", function(){
     surfaceNoise.addRecord(loveless);
+    surfaceNoise.addRecord(tanglewoodNumbers);
+
     surfaceNoise.soldRecord(loveless);
-    assert.equal(9.99, surfaceNoise.till)
+    surfaceNoise.soldRecord(tanglewoodNumbers);
+    assert.equal(21.98, surfaceNoise.till)
   })
 
   it ("found value of stock", function(){
@@ -67,15 +70,17 @@ describe( "RecordShop", function() {
     assert.equal(28.96, surfaceNoise.totalCash(surfaceNoise.stock))
   })
 
-  it ("found value of till", function(){
-    surfaceNoise.addRecord(loveless);
-    surfaceNoise.addRecord(tanglewoodNumbers);
-    surfaceNoise.addRecord(vivaHate);
-    surfaceNoise.soldRecord(loveless);
-    surfaceNoise.soldRecord(vivaHate);
-    surfaceNoise.soldRecord(tanglewoodNumbers);
-    assert.equal(28.96, surfaceNoise.totalCash(surfaceNoise.till))
-  })
+  // it ("found value of till", function(){
+  //   surfaceNoise.addRecord(loveless);
+  //   surfaceNoise.addRecord(tanglewoodNumbers);
+  //   surfaceNoise.addRecord(vivaHate);
+
+  //   surfaceNoise.soldRecord(loveless);
+  //   surfaceNoise.soldRecord(vivaHate);
+  //   surfaceNoise.soldRecord(tanglewoodNumbers);
+
+  //   assert.equal(27.97, surfaceNoise.totalCash(surfaceNoise.till))
+  // })
 
  
 })

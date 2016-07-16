@@ -6,7 +6,7 @@ var RecordShop = function(name, location, till) {
 }
 
 RecordShop.prototype = {
-  
+
   addRecord: function(record){
     this.stock.push(record);
   },
@@ -20,23 +20,18 @@ RecordShop.prototype = {
     var soldItem = _.findIndex(this.stock, title);
     var pulled = _.pullAt(this.stock, [soldItem]);
     var price = _.map(pulled, 'price');
-    this.till += price
+    this.till += (_.toNumber(price))
   },
 
   totalCash: function(attribute){
-    var total = _.sumBy(attribute, 'price');
-    return total
-  },
+    if (attribute === this.stock){
+      var total = _.sumBy(attribute, 'price');
+      return total;
+    } else if (attribute === this.till) {
+      return this.till;
+    }
+  }
 
-callback: function(stuff, stuff?){
-  functionOfSomeDescription(either, or)
-  either = this.till
-  or = this.stock
-}
-
-
-
- 
 }
 
 module.exports = RecordShop;
