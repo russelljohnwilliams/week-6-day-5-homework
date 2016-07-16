@@ -26,9 +26,7 @@ Customer.prototype = {
     var pulled = _.pullAt(this.shoppingBag, [soldItem]);
     var price = _.map(pulled, 'price');
     this.wallet += (_.toNumber(price));
-    console.log(shop.till)
     shop.till -= (_.toNumber(price));
-    
   }
 
 
